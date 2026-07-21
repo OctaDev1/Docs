@@ -1,0 +1,171 @@
+type: collection.insomnia.rest/5.0
+schema_version: "5.1"
+name: Staff Core
+meta:
+  id: wrk_da5dd2ea40774bc2bd7cd337cf4b982b
+  created: 1784645663154
+  modified: 1784645663154
+  description: ""
+collection:
+  - name: Staff Core
+    meta:
+      id: fld_a77b7612d5124165a1488c25ec976ffa
+      created: 1784645741208
+      modified: 1784645836144
+      sortKey: -1784645741208
+      description: ""
+    children:
+      - url: http://localhost:8080/colaborador
+        name: Criar Colaborador
+        meta:
+          id: req_1bde77999df64b17a442bac07de21913
+          created: 1784641552791
+          modified: 1784645811988
+          isPrivate: false
+          description: ""
+          sortKey: -1784645748184
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+              "Matricula": "FUNC-2026-001",
+              "Nome_Completo": "Ana Clara Souza",
+              "Data_Nascimento": "1995-04-12",
+              "CPF": "123.456.789-00",
+              "Email": "ana.souza@empresa.com",
+              "Data_Admissao": "2026-07-21",
+              "Data_Demissao": null,
+              "Tipo_Contrato": "CLT"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/colaborador/4
+        name: Excluir Colaborador
+        meta:
+          id: req_25ca180039b6430f8e3e33a3afc83050
+          created: 1784641552791
+          modified: 1784645820427
+          isPrivate: false
+          description: ""
+          sortKey: -1784645748090.25
+        method: DELETE
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/colaborador/1
+        name: Procurar Colaborador por ID
+        meta:
+          id: req_3b20f3cca9b44f1c97752d5278bf8187
+          created: 1784641552791
+          modified: 1784645819045
+          isPrivate: false
+          description: ""
+          sortKey: -1784645748096.5
+        method: GET
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/colaborador
+        name: Atualizar Colaborador
+        meta:
+          id: req_6d96eaa89f394a5ba0ff6b3f90c0750c
+          created: 1784641552791
+          modified: 1784645815931
+          isPrivate: false
+          description: ""
+          sortKey: -1784645748134
+        method: PUT
+        body:
+          mimeType: application/json
+          text: |-
+            {
+              "id": 1,
+              "matricula": "FUNC-2026-001",
+              "nomeCompleto": "Ana Clara Souza - Editado",
+              "dataNascimento": "1995-04-12",
+              "cpf": "123.456.789-00",
+              "email": "ana.souza.novo@empresa.com",
+              "dataAdmissao": "2026-07-21",
+              "dataDemissao": null,
+              "tipoContrato": "CLT"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/colaborador
+        name: Listar Todos os Colaboradores
+        meta:
+          id: req_81f9fce87417449eb09fd92dedb14da4
+          created: 1784641552791
+          modified: 1784645817387
+          isPrivate: false
+          description: ""
+          sortKey: -1784645748109
+        method: GET
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/colaborador/nome/Ana
+        name: Procurar Colaborador por Nome
+        meta:
+          id: req_e6cba9260d604c2db020ba83905ada52
+          created: 1784641552791
+          modified: 1784645821691
+          isPrivate: false
+          description: ""
+          sortKey: -1784645748087.125
+        method: GET
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+cookieJar:
+  name: Default Jar
+  meta:
+    id: jar_516ee661d8fcdc50c9cef453ade85eca6609b0ed
+    created: 1784645663156
+    modified: 1784645663156
+environments:
+  name: Base Environment
+  meta:
+    id: env_516ee661d8fcdc50c9cef453ade85eca6609b0ed
+    created: 1784645663155
+    modified: 1784645663155
+    isPrivate: false
