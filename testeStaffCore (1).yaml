@@ -1,0 +1,145 @@
+type: collection.insomnia.rest/5.0
+schema_version: "5.1"
+name: StaffCore
+meta:
+  id: wrk_a614596d9457495a98f7f2fce44d48c7
+  created: 1784645091908
+  modified: 1784645091908
+  description: ""
+collection:
+  - url: http://localhost:8080/colaborador
+    name: "Listar todos os Colaboradores "
+    meta:
+      id: req_f9774997547a48b0b701629f7b98f26e
+      created: 1784645098536
+      modified: 1784653614169
+      isPrivate: false
+      description: ""
+      sortKey: -1784645098536
+    method: GET
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:8080/colaborador
+    name: "Cadastrar Colaborador "
+    meta:
+      id: req_3361dbd01e6f4fd29e138042e204ff6e
+      created: 1784645184149
+      modified: 1784657027784
+      isPrivate: false
+      description: ""
+      sortKey: -1784472579796
+    method: POST
+    body:
+      mimeType: application/json
+      text: |
+        {
+          "matricula": "FUNC202601",
+          "nomeCompleto": "Bianca Alves Souza",
+          "dataNascimento": "1995-04-01",
+          "cpf": "111.444.777-35",
+          "email": "bianca.souza@staffcore.com",
+          "dataAdmissao": "2026-07-21",
+          "dataDemissao": null,
+          "tipoContrato": "CLT"
+        }
+    headers:
+      - name: Content-Type
+        value: application/json
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:8080/colaborador/nome/bianca
+    name: Listar Colaboradores por Nome
+    meta:
+      id: req_15d869601d8c4f539514fd8b0fc9c6c8
+      created: 1784648453812
+      modified: 1784656230928
+      isPrivate: false
+      description: ""
+      sortKey: -1784558839166
+    method: GET
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:8080/colaborador
+    name: Atualizar Colaborador
+    meta:
+      id: req_188fc395e5e94f289ae0222073c349b6
+      created: 1784652454045
+      modified: 1784657784701
+      isPrivate: false
+      description: ""
+      sortKey: -1784652454045
+    method: PUT
+    body:
+      mimeType: application/json
+      text: |-
+        {
+          "id": 3,
+          "matricula": "FUNC202601",
+          "nomeCompleto": "Bianca Clara Souza - Editado- segunda",
+          "dataNascimento": "1995-04-12",
+          "cpf": "111.444.777-35",
+          "email": "ana.souza.novo@staffcore.com",
+          "dataAdmissao": "2026-07-21",
+          "dataDemissao": null,
+          "tipoContrato": "CLT"
+        }
+    headers:
+      - name: Content-Type
+        value: application/json
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:8080/colaborador/3
+    name: "Deletar Colaborador "
+    meta:
+      id: req_50f64b53360a4fd492ec9d2eddc66658
+      created: 1784653083416
+      modified: 1784657801580
+      isPrivate: false
+      description: ""
+      sortKey: -1784653083416
+    method: DELETE
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+cookieJar:
+  name: Default Jar
+  meta:
+    id: jar_3417f1964a39e10521362763a5fe3903ac7e279a
+    created: 1784645091911
+    modified: 1784645091911
+environments:
+  name: Base Environment
+  meta:
+    id: env_3417f1964a39e10521362763a5fe3903ac7e279a
+    created: 1784645091910
+    modified: 1784645091910
+    isPrivate: false
