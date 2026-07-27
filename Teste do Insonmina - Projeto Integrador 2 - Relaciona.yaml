@@ -1,0 +1,490 @@
+type: collection.insomnia.rest/5.0
+schema_version: "5.1"
+name: Relaciona CRM
+meta:
+  id: wrk_167d02aaf1494af5a9eefc2e34459d0f
+  created: 1784899331256
+  modified: 1785117783427
+  description: ""
+collection:
+  - name: Cliente
+    meta:
+      id: fld_b3f30e7187eb466da53ecfb272ea3ac3
+      created: 1784899363089
+      modified: 1784899363089
+      sortKey: -1784899363089
+      description: ""
+    children:
+      - url: http://localhost:8080/clientes
+        name: 2 - Listar Todos os Clientes
+        meta:
+          id: req_e91793f8edb946739ab25c0a2df7fdf3
+          created: 1784908015403
+          modified: 1785183915502
+          isPrivate: false
+          description: ""
+          sortKey: -1785116040009
+        method: GET
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/clientes
+        name: 1 - Cadastrar Cliente
+        meta:
+          id: req_b912e32cb074473f85507df1394d4114
+          created: 1784908060087
+          modified: 1785183857514
+          isPrivate: false
+          description: ""
+          sortKey: -1785116040059
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            		"nomeCompleto": "Maria Joaquina",
+                "email": "marijoaquina@gmail.com.br",
+                "cpf": "393.193.080-71",
+                "tipoPessoa": "Fisica",
+                "dataNascimento": "2006-10-03"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/clientes/1
+        name: 3 - Buscar por ID
+        meta:
+          id: req_30c9dd43d2d4417b97e49cb694a15bff
+          created: 1784908231979
+          modified: 1785183925746
+          isPrivate: false
+          description: ""
+          sortKey: -1785116039984
+        method: GET
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/clientes/nome/Maria
+        name: 4 - Buscar por Nome
+        meta:
+          id: req_e83676def6264f8e97a3f1a195045537
+          created: 1784908256082
+          modified: 1785183983724
+          isPrivate: false
+          description: ""
+          sortKey: -1785116039971.5
+        method: GET
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/clientes
+        name: 5 - Atualizar Cliente
+        meta:
+          id: req_5cc3dd0340aa4734abcdde004783c212
+          created: 1784908271943
+          modified: 1785184006286
+          isPrivate: false
+          description: ""
+          sortKey: -1785116039965.25
+        method: PUT
+        body:
+          mimeType: application/json
+          text: |
+            {
+            "nomeCompleto": "Maria Joaquina - Atualizada",
+                "email": "mariajoaquina@gmail.com.br",
+                "cnpj": "70.813.829/0001-99",
+                "tipoPessoa": "Juridica",
+                "dataNascimento": "2006-10-03",
+            		"id": 1
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/clientes/1
+        name: 6 - Deletar Cliente
+        meta:
+          id: req_2d4e32db8da243449c1473af300d4472
+          created: 1785116039959
+          modified: 1785184851892
+          isPrivate: false
+          description: ""
+          sortKey: -1785116039959
+        method: DELETE
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+  - name: Oportunidade
+    meta:
+      id: fld_3173b315e97346619a31b8a02f873e35
+      created: 1784899448299
+      modified: 1784899448299
+      sortKey: -1784899448299
+      description: ""
+    children:
+      - url: http://localhost:8080/oportunidades
+        name: 1 - Cadastrar Oportunidade
+        meta:
+          id: req_bc5c84f687b346d0a6baf9b9c4c9c60f
+          created: 1785116867134
+          modified: 1785175629754
+          isPrivate: false
+          description: ""
+          sortKey: -1785116870336
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+              "titulo": "Implantação de CRM para Empresa XPTO",
+              "status": "EM_NEGOCIACAO",
+              "valor": 25000.00,
+              "cliente": {
+                "id": 1
+              },
+              "usuario": {
+                "id": 1
+              },
+              "dataCriacao": ""
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/oportunidades
+        name: 2 - Listar Todas as Oportunidades
+        meta:
+          id: req_8367e329c2ad4e0ca15800ce2f3688aa
+          created: 1785116875815
+          modified: 1785171435848
+          isPrivate: false
+          description: ""
+          sortKey: -1785116870236
+        method: GET
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/oportunidades/1
+        name: 3 - Buscar por ID
+        meta:
+          id: req_c7d8702b47c54def97f7884cfa13f3e9
+          created: 1785116891269
+          modified: 1785184588619
+          isPrivate: false
+          description: ""
+          sortKey: -1785116870136
+        method: GET
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/oportunidades/titulo/Implantação
+        name: 4 - Buscar por Título
+        meta:
+          id: req_7135effabf654766b90ae7a96d780f0e
+          created: 1785116898680
+          modified: 1785184484547
+          isPrivate: false
+          description: ""
+          sortKey: -1785116870036
+        method: GET
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/oportunidades
+        name: 5 - Atualizar Oportunidade
+        meta:
+          id: req_78fc34118aa74cf3b93ddd8fa16357cc
+          created: 1785116912314
+          modified: 1785175686628
+          isPrivate: false
+          description: ""
+          sortKey: -1785116869836
+        method: PUT
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"id": 1,
+              "titulo": "Implantação de CRM para Empresa XPTO",
+              "status": "Fechado",
+              "valor": 30000.00,
+              "cliente": {
+                "id": 1
+              },
+              "usuario": {
+                "id": 1
+            		
+              },
+              "dataCriacao": ""
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/oportunidades/1
+        name: 6 - Deletar Oportunidade
+        meta:
+          id: req_88820c8f391f44069f585978a20809d6
+          created: 1785117274980
+          modified: 1785184642652
+          isPrivate: false
+          description: ""
+          sortKey: -1785116869736
+        method: DELETE
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/oportunidades/1/status
+        name: 5 - Atualizar Status da Oportunidade
+        meta:
+          id: req_b15d3ba0270344548f2ebf72fc5afc34
+          created: 1785175670023
+          modified: 1785184633493
+          isPrivate: false
+          description: ""
+          sortKey: -1785116869786
+        method: PUT
+        body:
+          mimeType: application/json
+          text: |-
+            {
+              "status": "Fechado"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+  - name: Usuario
+    meta:
+      id: fld_c33876aaedb2450987f53a7c69402030
+      created: 1784899459426
+      modified: 1784899459426
+      sortKey: -1784899459426
+      description: ""
+    children:
+      - url: http://localhost:8080/usuarios/cadastrar
+        name: "1 - Cadastrar Usuário "
+        meta:
+          id: req_38dd7439f95f44ce8f6ec8b123fd926d
+          created: 1784903441063
+          modified: 1785183426956
+          isPrivate: false
+          description: ""
+          sortKey: -1784905516472
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+              "nome": "Maria Fernanda Costa",
+              "email": "maria.costa@relaciona.com.br",
+              "senha": "Admin@2026",
+              "foto": "https://i.imgur.com/adminPerfil.jpg",
+              "cargo": "Desenvolvedora Full Stack"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/usuarios
+        name: 2 - Listar Todos os Usuários
+        meta:
+          id: req_fd3e893c59ec45b7b125e50adcf4fe69
+          created: 1784903618794
+          modified: 1785116204394
+          isPrivate: false
+          description: ""
+          sortKey: -1784905516422
+        method: GET
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/usuarios/1
+        name: 3 - Buscar por ID
+        meta:
+          id: req_8f84c3314d5d4574b477a4e23eda0f36
+          created: 1784905150069
+          modified: 1785116267556
+          isPrivate: false
+          description: ""
+          sortKey: -1784905516397
+        method: GET
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/usuarios/nome/Maria
+        name: 4 - Buscar por Nome
+        meta:
+          id: req_2c10c35f929940bf9460438571fd91bf
+          created: 1784905455709
+          modified: 1785183450037
+          isPrivate: false
+          description: ""
+          sortKey: -1784905516384.5
+        method: GET
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/usuarios/email/maria.costa@relaciona.com.br
+        name: 5 - Buscar por Email
+        meta:
+          id: req_2bebf32b80364fc0be6fcdea4717666f
+          created: 1784905489876
+          modified: 1785183465980
+          isPrivate: false
+          description: ""
+          sortKey: -1784905516378.25
+        method: GET
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/usuarios/atualizar
+        name: 6 - Atualizar Usuário
+        meta:
+          id: req_1cbd53c293dd48a3b1dc0a33bc50f7e4
+          created: 1784905516372
+          modified: 1785183484903
+          isPrivate: false
+          description: ""
+          sortKey: -1784905516372
+        method: PUT
+        body:
+          mimeType: application/json
+          text: |-
+            {
+              "nome": "Maria Fernanda Costa - Atualizado",
+              "email": "maria.costa@relaciona.com.br",
+              "senha": "Admin@2026",
+              "foto": "https://i.imgur.com/adminPerfil.jpg",
+              "cargo": "Administrador",
+              "dataCadastro": "2026-07-25",
+            	"id": 1
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+cookieJar:
+  name: Default Jar
+  meta:
+    id: jar_75bc6a1f32d5c22914b28600cb67378b3d5b6428
+    created: 1784899331259
+    modified: 1784899331259
+environments:
+  name: Base Environment
+  meta:
+    id: env_75bc6a1f32d5c22914b28600cb67378b3d5b6428
+    created: 1784899331258
+    modified: 1784899331258
+    isPrivate: false
